@@ -1,14 +1,14 @@
 /*
-*	grupo  :
-*	alumno :
-*	n.exp. :
-*	fecha  :
+*	grupo  : Mañana
+*	alumno : Alberto Torres
+*	n.exp. : 7248
+*	fecha  : 01/06/2022
  */
 package Cheese;
 
 /**
  *
- * @author ___
+ * @author ATORRESPR
  */
 public class Main {
     
