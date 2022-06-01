@@ -48,7 +48,7 @@ public class ListaProductos {
      * @return Nos devuelve el objeto producto si sale bien o nulo si sale mal
      */
     public Producto addProducto(Producto prod) {
-        
+        if (prod.replace(" ","") == ""){
         if (listaP.containsKey(prod.getcode())) {
             // System.out.println("Producto con código duplicado");
             return null;
@@ -57,6 +57,8 @@ public class ListaProductos {
         this.setN(n);
         listaP.put(prod.getcode(), prod);
         return prod;
+        }
+        return null;
     }
 /**
  * Elimina un objeto de la lista
@@ -64,7 +66,7 @@ public class ListaProductos {
  * @return Si entra dentro del if no nos devuelve nada ya que lo abra borrado
  */
     public Producto eliminarProducto(String codigo) { 
-        
+        if (codigo.replace(" ","") == ""){
         Producto prod = buscarProducto(codigo);
         if (prod != null) {
         listaP.remove(codigo);
@@ -72,6 +74,8 @@ public class ListaProductos {
         this.setN(n);
         }
         return prod;
+        }
+        return null;
     }
 /**
  * Nos ayuda a buscar un producto dentro del codigo
@@ -80,13 +84,15 @@ public class ListaProductos {
  */
     public Producto buscarProducto(String codigo) { 
         Producto prod = null;
-        
+         if (codigo.replace(" ","") == ""){
         if (!listaP.containsKey(codigo)) {
             return prod;
         }
         else{
             return listaP.get(codigo);
         }
+         }  
+        return null;
     }
 /**
  * Saca los producto

@@ -127,4 +127,8 @@ public class Producto {
         System.out.println("Cantidad de leche: " + this.getCantidad_leche());
     }
 
+    String replace(String a_, String string) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }
